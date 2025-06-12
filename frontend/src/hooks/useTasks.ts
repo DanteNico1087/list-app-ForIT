@@ -7,7 +7,6 @@ import {
 } from '../api/tasksApi';
 import type { Task } from '../types';
 
-/** Hook para listar tareas */
 export const useTasks = () => {
   return useQuery<Task[], Error>({
     queryKey: ['tasks'],
@@ -15,26 +14,34 @@ export const useTasks = () => {
   });
 };
 
-/** Hook para crear una tarea */
 export const useCreateTask = () => {
   const qc = useQueryClient();
-  return useMutation(createTask, {
-    onSuccess: () => qc.invalidateQueries(['tasks']),
+  return useMutation({
+    mutationFn: (input: { title: string; description: string }) =>
+      createTask(input),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ['tasks'] });
+    },
   });
 };
 
-/** Hook para actualizar una tarea */
 export const useUpdateTask = () => {
   const qc = useQueryClient();
-  return useMutation(updateTask, {
-    onSuccess: () => qc.invalidateQueries(['tasks']),
+  return useMutation({
+    mutationFn: (task: Partial<Omit<Task, 'createdAt'>> & { id: string }) =>
+      updateTask(task),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ['tasks'] });
+    },
   });
 };
 
-/** Hook para eliminar una tarea */
 export const useDeleteTask = () => {
   const qc = useQueryClient();
-  return useMutation(deleteTask, {
-    onSuccess: () => qc.invalidateQueries(['tasks']),
+  return useMutation({
+    mutationFn: (id: string) => deleteTask(id),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ['tasks'] });
+    },
   });
 };
