@@ -1,9 +1,14 @@
+import { TaskList } from './components/TaskList';
+import { TaskForm } from './components/TaskForm';
+
 export default function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-5xl font-extrabold text-indigo-600">
-        ¡Tailwind v4 ok!
+    <div className="max-w-xl mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-4 text-center">
+        List App ForIT
       </h1>
+      <TaskForm />
+      <TaskList />
     </div>
   );
 }
