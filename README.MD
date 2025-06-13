@@ -140,6 +140,21 @@ list-app-ForIT/
 
 ---
 
+---
+
+## 📸 Capturas de pantalla
+
+![Vista principal](src/assets/Home.png)
+
+![Crear nueva tarea](src/assets/Create.png)
+
+![Editar tarea](src/assets/List.png)
+
+![Dark Mode](src/assets/Delete.png)
+
+---
+
+
 ## 📝 Licencia
 
 MIT © Dante Nicolás Caballero
