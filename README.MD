@@ -7,7 +7,40 @@ Frontend: React + Vite + TypeScript + Tailwind CSS 4.1.10
 Gestión de datos: Axios + React Query v5
 Validación de formularios: React Hook Form + Zod
 📂 Estructura del repositorio
-list-app-ForIT/ ├── backend/ │ ├── src/ │ │ ├── index.ts │ │ └── routes/ │ │ └── tasks.ts │ ├── .env.example │ ├── .gitignore │ ├── package.json │ ├── tsconfig.json │ └── tsconfig.node.json └── frontend/ ├── src/ │ ├── api/ │ │ ├── axiosClient.ts │ │ └── tasksApi.ts │ ├── components/ │ │ ├── TaskForm.tsx │ │ ├── TaskItem.tsx │ │ └── TaskList.tsx │ ├── hooks/ │ │ └── useTasks.ts │ ├── schemas/ │ │ └── taskSchema.ts │ ├── types.ts │ ├── App.tsx │ ├── index.css │ └── main.tsx ├── tailwind.config.cjs ├── vite.config.ts ├── package.json └── tsconfig.app.json 
+
+list-app-ForIT/ 
+├── backend/ 
+│ ├── src/ 
+│ │ ├── index.ts 
+│ │ └── routes/ 
+│ │   └── tasks.ts 
+│ ├── .env.example
+│ ├── .gitignore 
+│ ├── package.json 
+│ ├── tsconfig.json 
+│ └── tsconfig.node.json 
+└── frontend/ 
+  ├── src/ 
+  │ ├── api/ 
+  │ │ ├── axiosClient.ts 
+  │ │ └── tasksApi.ts 
+  │ ├── components/ 
+    │ │ ├── TaskForm.tsx 
+    │ │ ├── TaskItem.tsx 
+    │ │ └── TaskList.tsx 
+    │ ├── hooks/ 
+    │ │ └── useTasks.ts 
+    │ ├── schemas/ 
+    │ │ └── taskSchema.ts 
+    │ ├── types.ts 
+    │ ├── App.tsx 
+    │ ├── index.css 
+    │ └── main.tsx 
+├── tailwind.config.cjs 
+├── vite.config.ts 
+├── package.json 
+└── tsconfig.app.json 
+
 🚀 Configuración y ejecución
 Backend
 Entra en la carpeta backend:
