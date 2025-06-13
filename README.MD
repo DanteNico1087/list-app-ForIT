@@ -142,4 +142,4 @@ list-app-ForIT/
 
 ## 📝 Licencia
 
-MIT © **Tu Nombre**
+MIT © Dante Nicolás Caballero
