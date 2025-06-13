@@ -144,13 +144,13 @@ list-app-ForIT/
 
 ## 📸 Capturas de pantalla
 
-![Vista principal](src/assets/Home.png)
+![Vista principal](frontend/src/assets/Home.png)
 
-![Crear nueva tarea](src/assets/Create.png)
+![Crear nueva tarea](frontend/src/assets/Create.png)
 
-![Editar tarea](src/assets/List.png)
+![Lista de tareas](frontend/src/assets/List.png)
 
-![Dark Mode](src/assets/Delete.png)
+![liminar tareas](frontend/src/assets/Delete.png)
 
 ---
 
