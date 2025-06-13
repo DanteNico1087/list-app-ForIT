@@ -6,7 +6,7 @@ Variables de entorno: dotenv
 Frontend: React + Vite + TypeScript + Tailwind CSS 4.1.10
 Gestión de datos: Axios + React Query v5
 Validación de formularios: React Hook Form + Zod
-📂 Estructura del repositorio
+## 📂 Estructura del repositorio
 
 list-app-ForIT/ 
 ├── backend/ 
