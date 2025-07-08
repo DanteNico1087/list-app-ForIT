@@ -7,7 +7,6 @@ import tasksRouter from './routes/tasks';
 
 const app = express();
 const PORT = process.env.PORT || 4000;
-app.use(cors());
 
 app.use(
   cors({
@@ -37,6 +36,6 @@ const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {
 };
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server corriendo en http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Server corriendo en http://0.0.0.0:${PORT}`);
 });
