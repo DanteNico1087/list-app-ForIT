@@ -1,8 +1,8 @@
+// frontend/src/api/axiosClient.ts
 import axios from 'axios';
 
-/** Base URL de tu backend */
 const axiosClient = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:4000',
+  baseURL: '/api',                // <-- Rutas relativas
   headers: {
     'Content-Type': 'application/json',
   },

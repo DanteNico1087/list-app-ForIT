@@ -1,29 +1,32 @@
+// frontend/src/api/tasksApi.ts
 import axiosClient from './axiosClient';
 import type { Task } from '../types';
 
-/** Obtiene todas las tareas */
+/** GET /api/tasks */
 export const fetchTasks = async (): Promise<Task[]> => {
-  const { data } = await axiosClient.get<Task[]>('/api/tasks');
+  const { data } = await axiosClient.get<Task[]>('/tasks');  // <-- /tasks
   return data;
 };
 
-/** Crea una tarea */
+/** POST /api/tasks */
 export const createTask = async (input: {
   title: string;
   description: string;
 }): Promise<Task> => {
-  const { data } = await axiosClient.post<Task>('/api/tasks', input);
+  const { data } = await axiosClient.post<Task>('/tasks', input); // <-- /tasks
   return data;
 };
 
-/** Actualiza una tarea */
-export const updateTask = async (task: Partial<Omit<Task, 'createdAt'>> & { id: string }): Promise<Task> => {
-  const { data } = await axiosClient.put<Task>(`/api/tasks/${task.id}`, task);
+/** PUT /api/tasks/:id */
+export const updateTask = async (
+  task: Partial<Omit<Task, 'createdAt'>> & { id: string }
+): Promise<Task> => {
+  const { data } = await axiosClient.put<Task>(`/tasks/${task.id}`, task); // <-- /tasks/:id
   return data;
 };
 
-/** Elimina una tarea */
+/** DELETE /api/tasks/:id */
 export const deleteTask = async (id: string): Promise<Task> => {
-  const { data } = await axiosClient.delete<Task>(`/api/tasks/${id}`);
+  const { data } = await axiosClient.delete<Task>(`/tasks/${id}`); // <-- /tasks/:id
   return data;
 };
